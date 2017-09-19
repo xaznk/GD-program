@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<project>
+  <fileVersion>2</fileVersion>
+  <configuration>
+    <name>Debug</name>
+    <outputs>
+      <file>$TOOLKIT_DIR$\lib\clib\cl5s-ec_mul-64.r90</file>
+      <file>$PROJ_DIR$\Debug\Exe\GD_Kamaz.hex</file>
+      <file>$TOOLKIT_DIR$\inc\ina90.h</file>
+      <file>$TOOLKIT_DIR$\inc\iomacro.h</file>
+      <file>$TOOLKIT_DIR$\inc\clib\math.h</file>
+      <file>$TOOLKIT_DIR$\inc\clib\sysmac.h</file>
+      <file>$TOOLKIT_DIR$\inc\intrinsics.h</file>
+      <file>$PROJ_DIR$\IOM2560.H</file>
+      <file>$TOOLKIT_DIR$\inc\clib\stdio.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\RUN.pbi</file>
+      <file>$TOOLKIT_DIR$\inc\clib\stdarg.h</file>
+      <file>$TOOLKIT_DIR$\src\template\cfgm2560.xcl</file>
+      <file>$PROJ_DIR$\Debug\Obj\GD_Kamaz.pbd</file>
+      <file>$PROJ_DIR$\Debug\Obj\RUN.r90</file>
+      <file>$TOOLKIT_DIR$\inc\inavr.h</file>
+      <file>$TOOLKIT_DIR$\src\template\cfg5s.xcl</file>
+      <file>$TOOLKIT_DIR$\inc\comp_a90.h</file>
+      <file>$PROJ_DIR$\Command.h</file>
+      <file>$PROJ_DIR$\GD.h</file>
+      <file>$PROJ_DIR$\interf_PC.h</file>
+      <file>$PROJ_DIR$\interr_Ex.h</file>
+      <file>$PROJ_DIR$\Kernel.h</file>
+      <file>$PROJ_DIR$\Declar.h</file>
+      <file>$PROJ_DIR$\ADC.H</file>
+      <file>$PROJ_DIR$\List_Command.h</file>
+      <file>$PROJ_DIR$\model_var.h</file>
+      <file>$PROJ_DIR$\RW_EEPROM.h</file>
+      <file>$PROJ_DIR$\Step_Motor.h</file>
+      <file>$PROJ_DIR$\Test.h</file>
+      <file>$PROJ_DIR$\TIMER.H</file>
+      <file>$PROJ_DIR$\UART.h</file>
+      <file>$PROJ_DIR$\RUN.C</file>
+    </outputs>
+    <file>
+      <name>$PROJ_DIR$\Debug\Exe\GD_Kamaz.hex</name>
+      <inputs>
+        <tool>
+          <name>XLINK</name>
+          <file> 11 15 13 0</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>[ROOT_NODE]</name>
+      <outputs>
+        <tool>
+          <name>XLINK</name>
+          <file> 1</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\Debug\Obj\GD_Kamaz.pbd</name>
+      <inputs>
+        <tool>
+          <name>BILINK</name>
+          <file> 9</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\RUN.C</name>
+      <outputs>
+        <tool>
+          <name>ICCAVR</name>
+          <file> 13</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 9</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCAVR</name>
+          <file> 8 10 5 7 3 2 14 6 16 4 24 22 25 30 29 21 17 23 20 18 28 26 19 27</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 8 10 5 7 3 2 14 6 16 4 24 22 25 30 29 21 17 23 20 18 28 26 19 27</file>
+        </tool>
+      </inputs>
+    </file>
+  </configuration>
+  <configuration>
+    <name>Release</name>
+    <outputs/>
+    <forcedrebuild>
+      <name>[MULTI_TOOL]</name>
+      <tool>XLINK</tool>
+    </forcedrebuild>
+  </configuration>
+</project>
+
+

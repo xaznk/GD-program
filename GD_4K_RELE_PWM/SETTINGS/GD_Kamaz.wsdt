@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<Workspace>
+  <ConfigDictionary>
+    
+  <CurrentConfigs><Project>GD_Kamaz/Release</Project></CurrentConfigs></ConfigDictionary>
+  <Desktop>
+    <Static>
+      <Workspace>
+        <ColumnWidths>
+          
+          
+          
+          
+        <Column0>222</Column0><Column1>22</Column1><Column2>3</Column2><Column3>1242340</Column3></ColumnWidths>
+      </Workspace>
+      <Build>
+        
+        
+        
+        
+      <ColumnWidth0>20</ColumnWidth0><ColumnWidth1>724</ColumnWidth1><ColumnWidth2>193</ColumnWidth2><ColumnWidth3>48</ColumnWidth3></Build>
+    <Find-in-Files><ColumnWidth0>350</ColumnWidth0><ColumnWidth1>50</ColumnWidth1><ColumnWidth2>601</ColumnWidth2></Find-in-Files></Static>
+    <Windows>
+      
+      
+    <Wnd0>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-10212-31256</Identity>
+            <TabName>Workspace</TabName>
+            <Factory>Workspace</Factory>
+            <Session>
+              
+            <NodeDict><ExpandedNode>GD_Kamaz</ExpandedNode><ExpandedNode>GD_Kamaz/Output</ExpandedNode><ExpandedNode>GD_Kamaz/RUN.C</ExpandedNode></NodeDict></Session>
+          </Tab>
+        </Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd0><Wnd1>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-29618-31301</Identity>
+            <TabName>Build</TabName>
+            <Factory>Build</Factory>
+            <Session/>
+          </Tab>
+        <Tab><Identity>TabID-12774-15639</Identity><TabName>Find in Files</TabName><Factory>Find-in-Files</Factory><Session/></Tab></Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd1></Windows>
+    <Editor>
+      
+      
+      
+      
+    <Pane><Tab><Factory>TextEditor</Factory><Filename>C:\GD\C++\ver_2\RUN.C</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>2751</SelStart><SelEnd>2751</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>C:\GD\C++\ver_2\UART.H</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>311</SelStart><SelEnd>311</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>C:\GD\C++\ver_2\Kernel.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>168</SelStart><SelEnd>168</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>C:\GD\C++\ver_2\Command.h</Filename><XPos>0</XPos><YPos>87</YPos><SelStart>9884</SelStart><SelEnd>9903</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>C:\GD\C++\ver_2\Declar.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>220</SelStart><SelEnd>220</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>C:\GD\C++\ver_2\List_Command.h</Filename><XPos>0</XPos><YPos>9</YPos><SelStart>99</SelStart><SelEnd>99</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>C:\GD\C++\ver_2\RW_EEPROM.h</Filename><XPos>0</XPos><YPos>219</YPos><SelStart>4862</SelStart><SelEnd>4878</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>C:\GD\C++\ver_2\GD.h</Filename><XPos>0</XPos><YPos>81</YPos><SelStart>475</SelStart><SelEnd>475</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>C:\GD\C++\ver_2\TIMER.H</Filename><XPos>0</XPos><YPos>90</YPos><SelStart>3198</SelStart><SelEnd>3198</SelEnd></Tab><ActiveTab>8</ActiveTab><Tab><Factory>TextEditor</Factory><Filename>C:\GD\C++\ver_2\Step_Motor.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>325</SelStart><SelEnd>325</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>C:\GD\C++\ver_2\Test.h</Filename><XPos>0</XPos><YPos>540</YPos><SelStart>16343</SelStart><SelEnd>16362</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>C:\GD\C++\ver_2\ADC.H</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>134</SelStart><SelEnd>134</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>C:\GD\C++\ver_2\interf_PC.h</Filename><XPos>0</XPos><YPos>6</YPos><SelStart>762</SelStart><SelEnd>762</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>C:\GD\C++\ver_2\interr_Ex.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>90</SelStart><SelEnd>90</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>C:\GD\C++\ver_2\model_var.h</Filename><XPos>0</XPos><YPos>3</YPos><SelStart>953</SelStart><SelEnd>953</SelEnd></Tab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
+    <Positions>
+      
+      
+      
+      
+      
+    <Top><Row0><Sizes><Toolbar-008fe538><key>iaridepm1</key></Toolbar-008fe538></Sizes></Row0></Top><Left><Row0><Sizes><Wnd0><Rect><Top>-2</Top><Left>-2</Left><Bottom>529</Bottom><Right>284</Right><x>-2</x><y>-2</y><xscreen>0</xscreen><yscreen>0</yscreen><sizeHorzCX>0</sizeHorzCX><sizeHorzCY>0</sizeHorzCY><sizeVertCX>223438</sizeVertCX><sizeVertCY>733425</sizeVertCY></Rect></Wnd0></Sizes></Row0></Left><Right><Row0><Sizes/></Row0></Right><Bottom><Row0><Sizes><Wnd1><Rect><Top>-2</Top><Left>-2</Left><Bottom>151</Bottom><Right>1282</Right><x>-2</x><y>-2</y><xscreen>1284</xscreen><yscreen>153</yscreen><sizeHorzCX>1003125</sizeHorzCX><sizeHorzCY>211326</sizeHorzCY><sizeVertCX>0</sizeVertCX><sizeVertCY>0</sizeVertCY></Rect></Wnd1></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
+  </Desktop>
+</Workspace>
+
+
