@@ -28,7 +28,7 @@ void PID_regulator(void)
   /*tx_deter =(tx_deter + (taxometer_K * ADC_read(7) + taxometer_B))/2;  // + working sensor
   taxometer_predetermined = tx_deter + idling_motor_dizel;*/
   
-  //текущее значение тахометра
+  //ГІГҐГЄГіГ№ГҐГҐ Г§Г­Г Г·ГҐГ­ГЁГҐ ГІГ ГµГ®Г¬ГҐГІГ°Г 
   y_L=taxometer/200;
   if(y_L<(min_turns_motora_dizel/200)) y_L=min_turns_motora_dizel/200;
   if(y_L>15) y_L=15;
@@ -38,22 +38,22 @@ void PID_regulator(void)
   Step_Motor_Koeff = 4;
   Step_Motor_Future = (Step_Motor_OffSet + Step_motor_array_cicle[y_L])*Step_Motor_Koeff;// Step motor
   
-  //текущее значение давления 
+  //ГІГҐГЄГіГ№ГҐГҐ Г§Г­Г Г·ГҐГ­ГЁГҐ Г¤Г ГўГ«ГҐГ­ГЁГї 
   if(ADC_area_[ADC_MUX_pressure] < Turbo_offset) i_L=0;
   else i_L=(unsigned char)((ADC_area_[ADC_MUX_pressure]-Turbo_offset)/Turbo_Koeff);
-  if(i_L>6) i_L=6;//до значения 1.2 - максимум
+  if(i_L>6) i_L=6;//Г¤Г® Г§Г­Г Г·ГҐГ­ГЁГї 1.2 - Г¬Г ГЄГ±ГЁГ¬ГіГ¬
   
-  //переменные маркера в Delphi
+  //ГЇГҐГ°ГҐГ¬ГҐГ­Г­Г»ГҐ Г¬Г Г°ГЄГҐГ°Г  Гў Delphi
   high_level_index_I=i_L;
   high_level_index_Y=y_L;
   
-  //максимальное значение газа
+  //Г¬Г ГЄГ±ГЁГ¬Г Г«ГјГ­Г®ГҐ Г§Г­Г Г·ГҐГ­ГЁГҐ ГЈГ Г§Г 
   High_Level_PID_tax = array_high_level_PID[i_L][y_L];  
-  //коррекция угла впрыска
+  //ГЄГ®Г°Г°ГҐГЄГ¶ГЁГї ГіГЈГ«Г  ГўГЇГ°Г»Г±ГЄГ 
   sw1_number_tooth = faza_array_tooth[i_L][y_L-1];  
   
   i_L=0;
-  //значение с датчика педали
+  //Г§Г­Г Г·ГҐГ­ГЁГҐ Г± Г¤Г ГІГ·ГЁГЄГ  ГЇГҐГ¤Г Г«ГЁ
   Acselerometr_ADC=ADC_area_[ADC_MUX_axeleratora];
   if(Axelerometr_tax[0][0]>Acselerometr_ADC)
   {
@@ -106,7 +106,7 @@ void PID_regulator(void)
   R_prop = K_prop * taxometer_delta[0];
   R_int = R_int + K_int * taxometer_delta[0];
   R_dif = K_dif * (taxometer_delta[1]-taxometer_delta[0]);
-  Rezult_PID = (signed long)(R_prop + R_int + R_dif);
+  Rezult_PID = (R_prop + R_int + R_dif);
   
   /*if(Flag_PID_PI==0) Rezult_PID=Rezult_PID - (Kp_Gain_CH*((6*taxometer_delta[0])/5-taxometer_delta[1]))/Kp_Gain_2;     //PI  -----
   else Rezult_PID=Rezult_PID - (Kp_Gain_CH*((49*taxometer_delta[0])/20-(7*taxometer_delta[1])/2+(5*taxometer_delta[2])/4))/Kp_Gain_2;     //PID -----*/
@@ -116,14 +116,14 @@ void PID_regulator(void)
     if(Flag_PID_PI==3) Rezult_PID=Rezult_PID - ((49*taxometer_delta[0])/20-(7*taxometer_delta[1])/2+(5*taxometer_delta[2])/4)/Kp_Gain_2;     //PID -----*/
   
   //------------------------------------------------------------------------------------------------------
-  if(taxometer_predetermined<idling_motor_dizel+50)//idling_motor_dizel - обороты ХХ
+  if(taxometer_predetermined<idling_motor_dizel+50)//idling_motor_dizel - Г®ГЎГ®Г°Г®ГІГ» Г•Г•
   {
     if(taxometer<idling_motor_dizel+350) 
     {
       Q_PID_count++;
       if(Q_PID_count<Q_PID_const)
       {
-         if(Rezult_PID<Low_Level_Idling) Rezult_PID=Low_Level_Idling;//Low_Level_Idling - впрыск газа на ХХ
+         if(Rezult_PID<Low_Level_Idling) Rezult_PID=Low_Level_Idling;//Low_Level_Idling - ГўГЇГ°Г»Г±ГЄ ГЈГ Г§Г  Г­Г  Г•Г•
       }
     }
   }
@@ -142,7 +142,7 @@ void PID_regulator(void)
   
   
   //------------------------------------------------------------------------------------------------------
-  //подпрограмма "РЕАКЦИЯ НА ТЕМПЕРАТУРУ" 
+  //ГЇГ®Г¤ГЇГ°Г®ГЈГ°Г Г¬Г¬Г  "ГђГ…ГЂГЉГ–Г€Гџ ГЌГЂ Г’Г…ГЊГЏГ…ГђГЂГ’Г“ГђГ“" 
   //------------------------------------------------------------------------------------------------------
   switch(term_switch)
   {
@@ -360,7 +360,7 @@ void Condition(void)
                   {
                     if(Flag_PC_interf == 0)
                     {
-                        //передача ответного сигнала
+                        //ГЇГҐГ°ГҐГ¤Г Г·Г  Г®ГІГўГҐГІГ­Г®ГЈГ® Г±ГЁГЈГ­Г Г«Г 
                         printf_const_UART(OK_RUN_GD);
                         Send_UART_char(' ');
                      }
@@ -397,7 +397,7 @@ void Condition(void)
        {
           if(Flag_PC_interf == 0)
           {
-             //передача ответного сигнала
+             //ГЇГҐГ°ГҐГ¤Г Г·Г  Г®ГІГўГҐГІГ­Г®ГЈГ® Г±ГЁГЈГ­Г Г«Г 
              printf_const_UART(OTV_STOP_GD);
              Send_UART_char(' ');
           }
