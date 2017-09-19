@@ -58,14 +58,14 @@
 #define     RS485_Transmit_OUT    DDRB|=0x01
 #define     RS485_Transmit_ON     PORTB|=0x01
 #define     RS485_Transmit_OFF    PORTB&=~0x01
-#define     ADC_MUX_akumulator        1  //бортовое напряжение   ADC0 - по схеме 
-#define     ADC_MUX_axeleratora       2  //датчик педали         ADC1 - по схеме
-#define     ADC_MUX_pressure_gaza     3  //датчик давления газа  ADC3 - по схеме 
-#define     ADC_MUX_pressure          4  //датчик давления над   ADC3 - по схеме
-#define     ADC_MUX_termopara         5  //датчик Т выхлопа      ADC4 - по схеме
-#define     ADC_MUX_temp_shem         6  //датчик Т БУ           ADC5 - по схеме
-#define     ADC_MUX_DC_HD_A           7  //датчик тока ШД - А    ADC6 - по схеме //ADC_MUX_temp_D
-#define     ADC_MUX_DC_HD_B           0  //датчик тока ШД - B    ADC7 - по схеме //ADC_MUX_stM_sens1
+#define     ADC_MUX_akumulator        1  //ГЎГ®Г°ГІГ®ГўГ®ГҐ Г­Г ГЇГ°ГїГ¦ГҐГ­ГЁГҐ   ADC0 - ГЇГ® Г±ГµГҐГ¬ГҐ 
+#define     ADC_MUX_axeleratora       2  //Г¤Г ГІГ·ГЁГЄ ГЇГҐГ¤Г Г«ГЁ         ADC1 - ГЇГ® Г±ГµГҐГ¬ГҐ
+#define     ADC_MUX_pressure_gaza     3  //Г¤Г ГІГ·ГЁГЄ Г¤Г ГўГ«ГҐГ­ГЁГї ГЈГ Г§Г   ADC3 - ГЇГ® Г±ГµГҐГ¬ГҐ 
+#define     ADC_MUX_pressure          4  //Г¤Г ГІГ·ГЁГЄ Г¤Г ГўГ«ГҐГ­ГЁГї Г­Г Г¤   ADC3 - ГЇГ® Г±ГµГҐГ¬ГҐ
+#define     ADC_MUX_termopara         5  //Г¤Г ГІГ·ГЁГЄ Г’ ГўГ»ГµГ«Г®ГЇГ       ADC4 - ГЇГ® Г±ГµГҐГ¬ГҐ
+#define     ADC_MUX_temp_shem         6  //Г¤Г ГІГ·ГЁГЄ Г’ ГЃГ“           ADC5 - ГЇГ® Г±ГµГҐГ¬ГҐ
+#define     ADC_MUX_DC_HD_A           7  //Г¤Г ГІГ·ГЁГЄ ГІГ®ГЄГ  ГГ„ - ГЂ    ADC6 - ГЇГ® Г±ГµГҐГ¬ГҐ //ADC_MUX_temp_D
+#define     ADC_MUX_DC_HD_B           0  //Г¤Г ГІГ·ГЁГЄ ГІГ®ГЄГ  ГГ„ - B    ADC7 - ГЇГ® Г±ГµГҐГ¬ГҐ //ADC_MUX_stM_sens1
 #define     Faza_Motora_READ      PIND&0x01
 #define     Tooth_Motora_READ     PIND&0x80
 
@@ -132,9 +132,9 @@
 //array int
 #define   Axelerometr_tax_24LC16B          458//218
 
-//направление МУЗД
+//Г­Г ГЇГ°Г ГўГ«ГҐГ­ГЁГҐ ГЊГ“Г‡Г„
 #define   NAP_MUZD   1 //0
-//писк RUN_GD
+//ГЇГЁГ±ГЄ RUN_GD
 #define   PISK_RUN_GD   120
 //#define   PISK_STOP_GD   120
 
@@ -229,7 +229,7 @@ __near signed int Kp_Gain_2;
 //__near signed int Kp_Gain_1;
 //__near signed int Kp_Gain_0;
 //__near signed int Kp_Gain_CH;
-__near signed long Rezult_PID=0;
+__near float Rezult_PID=0;
 __near unsigned char high_level_index_I=0;
 __near unsigned char high_level_index_Y=0;
 __near unsigned int High_Level_PID;
@@ -271,14 +271,14 @@ __near unsigned char Test_Narabotka_count=0;
 __near unsigned int Narabotka_GAS_count=0;
 __near unsigned int Narabotka_count=0;
 
-//переменная отображающая кол. данных в пакете
+//ГЇГҐГ°ГҐГ¬ГҐГ­Г­Г Гї Г®ГІГ®ГЎГ°Г Г¦Г ГѕГ№Г Гї ГЄГ®Г«. Г¤Г Г­Г­Г»Гµ Гў ГЇГ ГЄГҐГІГҐ
 //UART
 unsigned int speed_SM;
 unsigned char UART_FI_address=0;
 unsigned char UART_FO_address=0;
 __near unsigned char UART_buffer_FIFO[256]; 
 
-//переменные для расчета количества зубьев
+//ГЇГҐГ°ГҐГ¬ГҐГ­Г­Г»ГҐ Г¤Г«Гї Г°Г Г±Г·ГҐГІГ  ГЄГ®Г«ГЁГ·ГҐГ±ГІГўГ  Г§ГіГЎГјГҐГў
 unsigned char enable_pysk_ras = 0;
 unsigned int data_TCNT0_now = 0;
 unsigned char tim_io;
@@ -366,7 +366,7 @@ unsigned char interf_pc_open = 0;
 unsigned char number_fors_kz = 0;
 
 
-//дополнительные переменные для ответного пакета
+//Г¤Г®ГЇГ®Г«Г­ГЁГІГҐГ«ГјГ­Г»ГҐ ГЇГҐГ°ГҐГ¬ГҐГ­Г­Г»ГҐ Г¤Г«Гї Г®ГІГўГҐГІГ­Г®ГЈГ® ГЇГ ГЄГҐГІГ 
 unsigned char dob_paket_0 = 0;
 unsigned char dob_paket_1 = 0;
 unsigned char dob_paket_2 = 0;
@@ -396,7 +396,7 @@ unsigned char migi_migi = 0;
 unsigned char prov_perne = 0;
 
 
-//переменные для работы в режиме добавления PWM
+//ГЇГҐГ°ГҐГ¬ГҐГ­Г­Г»ГҐ Г¤Г«Гї Г°Г ГЎГ®ГІГ» Гў Г°ГҐГ¦ГЁГ¬ГҐ Г¤Г®ГЎГ ГўГ«ГҐГ­ГЁГї PWM
 unsigned char fors_pwm;
 unsigned char on_off_fors_pwm;
 unsigned char disable_pwm_f1 = 0;
@@ -407,7 +407,7 @@ unsigned char kil_open_fors = 0;
 unsigned char proverka_fors = 20;
 
 
-//переменная для работы с отображением работы ДФ
+//ГЇГҐГ°ГҐГ¬ГҐГ­Г­Г Гї Г¤Г«Гї Г°Г ГЎГ®ГІГ» Г± Г®ГІГ®ГЎГ°Г Г¦ГҐГ­ГЁГҐГ¬ Г°Г ГЎГ®ГІГ» Г„Г”
 unsigned char dopi_per_2;
 unsigned char kil_zyb_df;
 
@@ -524,7 +524,7 @@ void init_PRINTF_var(void);
 void write_eeprom_24LC16B(void);
 void read_eeprom_24LC16B(void);
 void init_24LC16B_var(void);
-//программа для записи начальных параметров работы
+//ГЇГ°Г®ГЈГ°Г Г¬Г¬Г  Г¤Г«Гї Г§Г ГЇГЁГ±ГЁ Г­Г Г·Г Г«ГјГ­Г»Гµ ГЇГ Г°Г Г¬ГҐГІГ°Г®Гў Г°Г ГЎГ®ГІГ»
 void write_test_data(void);
 // -------------------------------- end RW_EEPROM.h ------------------------
 
@@ -536,5 +536,5 @@ void PC_indicator_state(void);
 void Step_Motor_init(void);
 //--------------------------------- end Step_Motor.h -----------------------
 
-float taxo_filt=0; //фильтр тахометра 1-го порядка
+float taxo_filt=0; //ГґГЁГ«ГјГІГ° ГІГ ГµГ®Г¬ГҐГІГ°Г  1-ГЈГ® ГЇГ®Г°ГїГ¤ГЄГ 
 
